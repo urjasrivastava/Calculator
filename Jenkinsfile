@@ -1,7 +1,7 @@
 pipeline
 {
     agent any
-    {
+
         stages
         {
             stage("Compile")
@@ -19,5 +19,5 @@ pipeline
                 }
             }
         }
-    }
+
 }
