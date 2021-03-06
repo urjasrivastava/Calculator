@@ -1,7 +1,11 @@
 pipeline
 {
     agent any
-
+    environment
+    {   dockerImage=''
+        registry='urjasri/calculator'
+        registryCredential='dockerhub_id'
+    }
         stages
         {
 
@@ -30,15 +34,23 @@ pipeline
             {
                 steps
                 {
-                    sh "docker build -t urjasri/calculator ."
+                    script
+                    {
+                        dockerImage=docker.build registry
+                    }
                 }
             }
             stage("Docker Push")
             {
                 steps
                 {
-
-                    sh "docker push urjasri/calculator"
+                    script
+                    {
+                        docker.withRegistry('',registryCredential)
+                        {
+                            dockerImage.push()
+                        }
+                    }
                 }
             }
         }
