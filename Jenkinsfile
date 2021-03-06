@@ -4,16 +4,7 @@ pipeline
 
         stages
         {
-         stage("Fix the permission issue")
-         {
 
-                agent any
-
-                steps {
-                    sh "sudo chown root:jenkins /run/docker.sock"
-                }
-
-            }
             stage("Compile")
             {
                 steps
@@ -39,14 +30,14 @@ pipeline
             {
                 steps
                 {
-                    sh "docker build -t urjasri/calculator ."
+                    sh "sudo docker build -t urjasri/calculator ."
                 }
             }
             stage("Docker Push")
             {
                 steps
                 {
-                    sh "docker push urjasri/calculator"
+                    sh "sudo docker push urjasri/calculator"
                 }
             }
         }
