@@ -37,7 +37,7 @@ pipeline
             {
                 steps
                 {
-                    sh "docker login --username urjasri --password dfgoki9999"
+
                     sh "docker push urjasri/calculator"
                 }
             }
