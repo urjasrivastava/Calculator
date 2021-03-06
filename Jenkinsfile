@@ -18,6 +18,27 @@ pipeline
                     sh "./mvnw test"
                 }
             }
+            stage("Package")
+            {
+                steps
+                {
+                    sh "./mvnw package"
+                }
+            }
+            stage("Docker Build")
+            {
+                steps
+                {
+                    sh "docker build -t urjasri/calculator ."
+                }
+            }
+            stage("Docker Push")
+            {
+                steps
+                {
+                    sh "docker push urjasri/calculator"
+                }
+            }
         }
 
 }
