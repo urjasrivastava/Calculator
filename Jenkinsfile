@@ -30,14 +30,14 @@ pipeline
             {
                 steps
                 {
-                    sh "sudo docker build -t urjasri/calculator ."
+                    sh "docker build -t urjasri/calculator ."
                 }
             }
             stage("Docker Push")
             {
                 steps
                 {
-                    sh "sudo docker push urjasri/calculator"
+                    sh "docker push urjasri/calculator"
                 }
             }
         }
