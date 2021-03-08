@@ -8,11 +8,13 @@ body
     margin: 100px auto;
     font-size: large;
     padding: 50px;
-    background-color: aliceblue;
+    background-color: cornsilk;
     border-color: cadetblue;
     border-style: solid;
     border-width: 2px;
     display: block;
+    font-weight: bolder;
+
 }
 h1
 {   text-align: center;

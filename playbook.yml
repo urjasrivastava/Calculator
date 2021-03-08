@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  become_user: urja
+  become_method: sudo
+  tasks:
+    - name: install docker-py
+      pip:
+        name: docker-py
+    - name: run container
+      docker_container:
+        name: calculator
+        image: urjasri/calculator
+        state: started
+        network_mode: bridge
+        exposed_ports: "8888"
+        published_ports: "8888:8888"
