@@ -57,7 +57,7 @@ pipeline
             {
                 steps
                 {
-                    sh "ansible-playbook playbook.yml -i inventory"
+                    ansiblePlaybook credentialsId: 'private-key',disableHostKeyChecking:true,inventory:'inventory',playbook: 'playbook.yml'
                 }
             }
         }
