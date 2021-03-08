@@ -57,7 +57,7 @@ pipeline
             {
                 steps
                 {
-                    sh "ansible-playbook playbook.yml --ask-pass -i inventory"
+                    sh "ansible-playbook playbook.yml -i inventory"
                 }
             }
         }
