@@ -8,14 +8,17 @@ public class Calculator
     {
         return (int) Math.pow(a,b);
     }
+
     double sqrt(double a)
     {
         return Math.sqrt(a);
     }
+
     double log(double a)
     {
         return Math.log(a);
     }
+
     long factorial(int a)
     {
         if(a<0)

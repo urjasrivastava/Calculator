@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.calculator.Calculator.CalculatorApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.525 s - in com.calculator.Calculator.CalculatorApplicationTests
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.24 s - in com.calculator.Calculator.CalculatorApplicationTests

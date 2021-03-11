@@ -32,6 +32,11 @@ class CalculatorApplicationTests {
 		assertNotEquals(8,calculator.log(10));
 	}
 	@Test
+	public void testzerofact()
+	{
+		assertEquals(1,calculator.factorial(0));
+	}
+	@Test
 	void contextLoads() {
 	}
 }
